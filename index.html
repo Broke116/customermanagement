@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Tutorial</title>
+    <link rel="stylesheet" href="content/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Management System</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Orders</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<div class="container">
+      <div data-ng-view="">   
+        
+      </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <p>Content here</p>
+    </div>
+  </footer>
+
+  <!-- Vendor libraries-->
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-route.min.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <!-- App libraries -->
+  <script src="app/app.js"></script>
+  <script src="app/controllers/controllers.js"></script>
+  <script src="app/services/services.js"></script>
+</body>
+</html>

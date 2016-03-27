@@ -1,0 +1,55 @@
+<br/>
+<div class="container">
+    <div class="page-header" id="header">
+        <h1>Customers</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            First Name:<br/>
+            <input type="text" data-ng-model="newCustomer.firstname" name="firstname" placeholder="Firstname" />
+        </div>
+        <div class="col-md-3">
+            Last Name:<br/>
+            <input type="text" data-ng-model="newCustomer.lastname" name="lastname" placeholder="Lastname" />
+        </div>
+        <div class="col-md-3">
+            Country:<br/>
+            <input type="text" data-ng-model="newCustomer.country" name="country" placeholder="Country" />
+        </div>
+        <div class="col-md-3">
+            <br/>
+            <button class="btn btn-primary" data-ng-click="addCustomer()">Add Customer</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-ng-repeat="cust in filteredCustomers">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">{{cust.name.first}} {{cust.name.last }}</h4>
+                <p class="card-text">{{cust.location.country}}</p>
+                <a href="/detail/{{cust.id}}">Detail</a>
+              </div>
+            </div>
+        </div>        
+    </div>
+    <div class="container"><!-- if our customer array is empty,it returns this section -->
+        <div class="row" data-ng-show="customers.length == 0">
+            <div class="col-span-12">
+                No results found
+            </div>
+        </div>
+        <div class="row" data-ng-show="customers.length > 0">
+            <div class="col-span-12">
+                <uib-pagination
+                        ng-model="currentPage"
+                        total-items="customers.length"
+                        max-size="maxSize"
+                        items-per-page="numPerPage"
+                        boundary-links="true">
+                </uib-pagination>
+            </div>
+        </div>
+    </div>
+    <a href="/view2">View 2</a>
+</div>
