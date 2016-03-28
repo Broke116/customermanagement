@@ -1,5 +1,5 @@
 demoApp.factory('SimpleFactory', function(){
-    //dataları tutan json.normalde veritabanından çekme işlemi yapılır.
+    //normally we need to get this datas from database,but for now i use this static dataset
     var customers = [
       {
         "email": "shelby.orr@xiix.net",
